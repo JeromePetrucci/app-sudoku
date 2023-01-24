@@ -1,23 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import InnerGrid from './innerGrid/innerGrid';
 
 function App() {
+  let value = [
+    [[9,7,6,2,4,1,5,8,3],[1,1,0,0,1,0,1,0,1]],
+    [[4,8,3,5,6,9,7,2,1],[1,1,1,1,0,0,1,1,0]],
+    [[2,1,5,8,7,3,6,4,9],[1,0,1,0,0,0,1,0,1]],
+    [[3,9,5,7,1,8,4,6,2],[1,0,1,1,1,1,1,1,0]],
+    [[2,4,7,6,9,5,1,3,8],[0,1,1,1,1,1,0,1,0]],
+    [[1,6,8,3,2,4,9,5,7],[1,0,0,0,1,0,0,1,0]],
+    [[8,5,7,1,2,9,6,3,4],[0,1,1,0,1,0,0,1,0]],
+    [[3,1,6,8,7,4,9,5,2],[1,1,0,1,1,1,0,1,0]],
+    [[4,9,2,5,3,6,7,8,1],[0,0,1,0,0,0,1,0,1]]
+  ]
+  //console.log(value[0][0])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      
+      <div className="grid">
+        {value.map((v,i) => <InnerGrid listCase={v} cle={i} key={i} ></InnerGrid>) }
+      </div>
     </div>
   );
 }
