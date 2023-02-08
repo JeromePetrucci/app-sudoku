@@ -1,27 +1,64 @@
-.App{
-  text-align: center;
-}
 .grid {
-  margin : 10%;
+  margin-top: 5%;
+  margin-bottom: 5%;
   margin-left: 20%;
   display: grid;
-  grid-template-columns: 125px 125px 125px ;
-  grid-template-rows: 125px 125px 125px  ;
+  grid-template-columns: 150px 150px 150px;
+  grid-template-rows: 150px 150px 150px;
+  text-align: center;
+}
+
+.actionMenu {
+  margin-left: 19.5%;
+}
+
+.victory {
+  margin-top: 2%;
   text-align: center;
 }
 
 .inner-grid {
-  margin : 0;
+  margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr ;
-  grid-template-rows: 1fr 1fr 1fr ;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   outline: solid;
   text-align: center;
 }
 
 .case {
-  background-color: rgb(169, 178, 197);
+  
   outline: solid;
-  outline-color: rgba(92, 91, 91, 0.575);
+  outline-color: rgba(216, 207, 207, 0.575);
+}
+
+.blue {
+  background-color: rgb(147, 174, 233);
+  color: black
+}
+
+.darkblue {
+  background-color: rgb(57, 101, 194);
+  color: black
+}
+
+.gray {
+  background-color: rgb(145, 147, 153);
+}
+
+.darkgray {
+  background-color: rgb(94, 102, 132)
+}
+
+.green {
+  background-color: rgb(65, 170, 92);
+}
+
+.darkgreen {
+  background-color: rgb(50, 109, 65);
+}
+
+.red {
+  background-color: rgb(192, 66, 66);
 }
