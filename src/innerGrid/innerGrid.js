@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Chip } from '@mui/material';
 import '../App.css';
 
 function createShowList(answerList, reveledList) {
@@ -58,7 +59,10 @@ function InnerGrid(props) {
                 onClick={(e) => handleClick(e, props.cle, i)}
                 disabled={(reveledList[i] === 1)}
             >
-                {num}</button>)}
+                {(reveledList[i] === 1 || num === " ") ? num : 
+                <Chip label={num} />}
+                
+            </button>)}
         </div>
     )
 }

@@ -32,6 +32,37 @@ function randomOneList (difficulty){
   return firstList;
 }
 
+function createTest() {
+  let completeGrid = []
+
+  let number = shuffle([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+ 
+
+  let list1 = number.slice(0,3);
+  let list2 = number.slice(3,6);
+  let list3 = number.slice(-3);
+  completeGrid.push([list1,list2,list3]);
+  console.log(completeGrid)
+
+  let number2 = shuffle([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+  let i = 0;
+  let list4 = [];
+  while (list4.length < 3 && i<9){
+    if (!list1.includes(number2[i])) {list4.push(number2[i])}
+    i++
+  }
+  
+  i = 0
+  let list5 = []
+  while (list5.length < 3 && i<9) {
+    if (!list2.includes(number2[i]) && !list4.includes(number2[i])) {list5.push(number2[i])}
+    i++
+  }
+  console.log("list4",list4)
+  console.log("list5",list5)
+
+
+}
 
 function create(){
   let number = shuffle([1, 2, 3, 4, 5, 6, 7, 8, 9]);
@@ -48,7 +79,7 @@ function create(){
   let list8 = [list2[2],list2[0],list2[1]];
   let list9 = [list3[2],list3[0],list3[1]];
 
-  const diff = 0.33;
+  const diff = 0.4;
 
   const listCase =[
     [list1.concat(list2).concat(list3), randomOneList(diff)],
@@ -101,6 +132,7 @@ function App() {
 
   function handleClick(e, v) {
     setChosenNumber(v)
+    //createTest()
   }
 
   function handleVerif(i, bool) {
